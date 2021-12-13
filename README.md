@@ -40,6 +40,11 @@ You can check if the topics were properly created by executing the following com
 rpk topic list --brokers=localhost:9092</code></p>
   
 Next step is to clone the git repo on your local, making sure that you have properly build the project without any errors.
+If by any case you prefer to execute the project directly in CMD or terminal just run the following commands:
+<p dir="auto"><code>mvn clean install</code></p>
+Once the build is successful you can run the project with the command:
+<p dir="auto"><code>mvn spring-boot:run</code></p>
+
 Now you should be able to run the project and check the output. In the logs you might be able to see the messages being sent from the producer:
 ![alt text](https://user-images.githubusercontent.com/31374207/145735329-71a546ae-ae6e-4a2b-a2ff-54173fc04f11.JPG)
 and also check the listeners consume the message based on the topic name:
