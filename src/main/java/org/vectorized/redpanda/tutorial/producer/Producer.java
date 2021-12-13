@@ -25,7 +25,6 @@ public class Producer {
 
     public void send(Order order){
         log.info("Order sent: {}", order);
-        System.out.println(">" + orderUpdatesTopic);
 
         if (order.getOrderStatus() == null) {
             log.error("Invalid order status: {}", order);
@@ -34,11 +33,15 @@ public class Producer {
 
         switch(order.getOrderStatus()) {
             case PENDING:
+                System.out.println("> sending to pending topic");
                 kafkaTemplate.send(pendingOrdersTopic, order);
                 break;
             case CANCELLED:
+                System.out.println("> sending to cancelled topic");
                 kafkaTemplate.send(cancelledOrdersTopic, order);
                 break;
+            default:
+                log.info("Sending to order updates topic");
         }
 
         kafkaTemplate.send(orderUpdatesTopic, order);
