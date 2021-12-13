@@ -54,8 +54,6 @@
 			<version>1.5.0</version>
 			<scope>test</scope>
 		</dependency>
-dqw
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

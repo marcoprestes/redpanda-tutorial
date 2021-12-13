@@ -95,7 +95,6 @@ class EmbeddedKafkaIntegrationTest {
     protected long getEndOffset(String group, String topic, int partition) {
         try (KafkaConsumer<String, Order> consumer = new KafkaConsumer(getConsumerProperties(group))) {
             TopicPartition topicPartition = new TopicPartition(topic, partition);
-            consumer.
             Map<TopicPartition, Long> endOffsets = consumer.endOffsets(Collections.singleton(topicPartition));
             return endOffsets.get(topicPartition);
         }
