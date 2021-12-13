@@ -1,4 +1,4 @@
-# redpanda-tutorial
+# Redpanda x Java Tutorial
 Redpanda tutorial for Vectorized technical documentation.
 This project intends to demonstrate how RedPanda can be used alogn with a Java Application.
 
@@ -41,10 +41,9 @@ rpk topic list --brokers=localhost:9092</code></p>
   
 Next step is to clone the git repo on your local, making sure that you have properly build the project without any errors.
 Now you should be able to run the project and check the output. In the logs you might be able to see the messages being sent from the producer:
-[image]
-and also check the listeners consume the message based on the topic name
-[image]
-
+![alt text](https://user-images.githubusercontent.com/31374207/145735329-71a546ae-ae6e-4a2b-a2ff-54173fc04f11.JPG)
+and also check the listeners consume the message based on the topic name:
+![alt text](https://user-images.githubusercontent.com/31374207/145735326-ea276732-cfc8-4cb1-a2e3-537bf2976aac.JPG)
 <h3>Tips</h3>
 If you would like to create different scenarios check the class <a>RedpandaTutorialApplication</a> or add different test cases.
   
