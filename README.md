@@ -45,6 +45,6 @@ Now you should be able to run the project and check the output. In the logs you 
 and also check the listeners consume the message based on the topic name
 [image]
 
-<h3>Tips</3>
+<h3>Tips</h3>
 If you would like to create different scenarios check the class <a>RedpandaTutorialApplication</a> or add different test cases.
   
