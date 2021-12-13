@@ -34,7 +34,7 @@ rpk topic delete pending_orders --brokers=localhost:9092</code></p>
 <p dir="auto"><code>docker exec -it redpanda-1 ^
 rpk topic delete cancelled_orders --brokers=localhost:9092</code></p>
 
-<b>*Be aware that if you created a cluster with a different name/port, the commands above must be changed to reflect your environment*</b>
+<p dir="auto"><b>*Be aware that if you have created a cluster with a different name/port or even if are running in different OS, the commands above must be changed to reflect your environment*</b></p>
 You can check if the topics were properly created by executing the following command line:
 <p dir="auto"><code>docker exec -it redpanda-1 ^
 rpk topic list --brokers=localhost:9092</code></p>
@@ -45,5 +45,5 @@ Now you should be able to run the project and check the output. In the logs you 
 and also check the listeners consume the message based on the topic name:
 ![alt text](https://user-images.githubusercontent.com/31374207/145735326-ea276732-cfc8-4cb1-a2e3-537bf2976aac.JPG)
 <h3>Tips</h3>
-If you would like to create different scenarios check the class <a>RedpandaTutorialApplication</a> or add different test cases.
+If you would like to create different scenarios check the class <a href="https://github.com/marcoprestes/redpanda-tutorial/blob/main/src/main/java/org/vectorized/redpanda/tutorial/RedpandaTutorialApplication.java">RedpandaTutorialApplication</a> or add different test cases.
   
